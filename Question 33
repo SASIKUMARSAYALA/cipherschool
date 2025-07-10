@@ -1,1 +1,29 @@
+// Outer class
+public class Outer {
+
+    // Private Inner class
+    private class Inner {
+        public String getMessage() {
+            return "Hello from the Inner class!";
+        }
+    }
+
+    // Method in Outer to call Inner's method
+    public String callInnerMethod() {
+        Inner inner = new Inner();  // Creating Inner class object
+        return inner.getMessage();  // Calling Inner method
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        // Create Outer class object
+        Outer outer = new Outer();
+
+        // Call method that accesses private Inner class
+        String result = outer.callInnerMethod();
+
+        // Print result
+        System.out.println(result);
+    }
+}
 
