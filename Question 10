@@ -1,0 +1,17 @@
+public class Main {
+    public static void main(String[] args) {
+        // Float to Integer (Explicit casting)
+        float floatValue = 5.75f;
+        int intValueFromFloat = (int) floatValue;
+
+        System.out.println("Original float value: " + floatValue);
+        System.out.println("Converted int value: " + intValueFromFloat);
+
+        // Integer to Double (Implicit casting)
+        int intValue = 42;
+        double doubleValueFromInt = intValue;
+
+        System.out.println("Original int value: " + intValue);
+        System.out.println("Converted double value: " + doubleValueFromInt);
+    }
+}
