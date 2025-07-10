@@ -1,1 +1,28 @@
+public class Main {
+    public static void main(String[] args) {
+        // Primitive type declarations and initialization
+        int myInt = 42;
+        float myFloat = 3.14f;
+        double myDouble = 99.99;
+        char myChar = 'A';
+        boolean myBoolean = true;
+
+        // Print primitive variables
+        System.out.println("Integer value: " + myInt);
+        System.out.println("Float value: " + myFloat);
+        System.out.println("Double value: " + myDouble);
+        System.out.println("Character value: " + myChar);
+        System.out.println("Boolean value: " + myBoolean);
+
+        // Convert float to int (explicit cast)
+        int convertedInt = (int) myFloat;
+        System.out.println("Original float: " + myFloat);
+        System.out.println("Converted to int: " + convertedInt);
+
+        // Convert int to double (implicit cast)
+        double convertedDouble = myInt;
+        System.out.println("Original int: " + myInt);
+        System.out.println("Converted to double: " + convertedDouble);
+    }
+}
 
