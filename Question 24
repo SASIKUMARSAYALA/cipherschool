@@ -1,1 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // --- Part 1: Celsius to Fahrenheit ---
+        System.out.print("Enter temperature in Celsius: ");
+        float celsius = scanner.nextFloat();
+
+        float fahrenheit = (celsius * 9 / 5) + 32;
+
+        System.out.println("Temperature in Fahrenheit: " + fahrenheit);
+
+        // --- Part 2: Simple Interest Calculation ---
+        System.out.print("\nEnter Principal amount: ");
+        float principal = scanner.nextFloat();
+
+        System.out.print("Enter Rate of Interest (in %): ");
+        float rate = scanner.nextFloat();
+
+        System.out.print("Enter Time (in years): ");
+        float time = scanner.nextFloat();
+
+        // Formula: Simple Interest = (P × R × T) / 100
+        float simpleInterest = (principal * rate * time) / 100;
+
+        System.out.println("Simple Interest: " + simpleInterest);
+
+        scanner.close();
+    }
+}
 
