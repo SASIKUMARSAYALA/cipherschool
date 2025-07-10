@@ -1,1 +1,80 @@
+// Book class with parameterized constructor
+class Book {
+    String title;
+    String author;
+    int pages;
+
+    // Parameterized constructor
+    public Book(String title, String author, int pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+
+    // Method to display book details
+    public void displayInfo() {
+        System.out.println("Title : " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Pages : " + pages);
+        System.out.println("-------------------------");
+    }
+}
+
+// Student class using encapsulation
+class Student {
+    // Private fields
+    private String name;
+    private int rollNumber;
+    private double marks;
+
+    // Public getter and setter for name
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Public getter and setter for rollNumber
+    public int getRollNumber() {
+        return rollNumber;
+    }
+    public void setRollNumber(int rollNumber) {
+        this.rollNumber = rollNumber;
+    }
+
+    // Public getter and setter for marks
+    public double getMarks() {
+        return marks;
+    }
+    public void setMarks(double marks) {
+        this.marks = marks;
+    }
+}
+
+// Main class to demonstrate both
+public class Main {
+    public static void main(String[] args) {
+        // Creating two Book objects using parameterized constructor
+        Book book1 = new Book("Wings of Fire", "A.P.J. Abdul Kalam", 180);
+        Book book2 = new Book("Clean Code", "Robert C. Martin", 464);
+
+        System.out.println("Book 1 Details:");
+        book1.displayInfo();
+
+        System.out.println("Book 2 Details:");
+        book2.displayInfo();
+
+        // Using encapsulation with Student class
+        Student student = new Student();
+        student.setName("Sasikumar");
+        student.setRollNumber(123);
+        student.setMarks(92.5);
+
+        System.out.println("Student Details:");
+        System.out.println("Name      : " + student.getName());
+        System.out.println("Roll No.  : " + student.getRollNumber());
+        System.out.println("Marks     : " + student.getMarks());
+    }
+}
 
