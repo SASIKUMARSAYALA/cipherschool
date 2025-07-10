@@ -1,1 +1,81 @@
+// Task 1: Abstract class Shape and derived classes
+
+abstract class Shape {
+    // Abstract method
+    abstract void area();
+}
+
+class Circle extends Shape {
+    double radius;
+
+    // Constructor
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Implement area()
+    @Override
+    void area() {
+        double area = Math.PI * radius * radius;
+        System.out.println("Area of Circle: " + area);
+    }
+}
+
+class Rectangle extends Shape {
+    double length, width;
+
+    // Constructor
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    // Implement area()
+    @Override
+    void area() {
+        double area = length * width;
+        System.out.println("Area of Rectangle: " + area);
+    }
+}
+
+// Task 2: Interface Playable and its implementations
+
+interface Playable {
+    void play();
+}
+
+class Guitar implements Playable {
+    @Override
+    public void play() {
+        System.out.println("Guitar is playing a melody 🎸");
+    }
+}
+
+class Drum implements Playable {
+    @Override
+    public void play() {
+        System.out.println("Drum is beating rhythmically 🥁");
+    }
+}
+
+// Main class to demonstrate everything
+public class Main {
+    public static void main(String[] args) {
+        // --- Abstract class and polymorphism demo ---
+        Shape circle = new Circle(5.0);
+        Shape rectangle = new Rectangle(4.0, 6.0);
+
+        System.out.println("Calculating areas:");
+        circle.area();
+        rectangle.area();
+
+        // --- Interface and polymorphism demo ---
+        Playable guitar = new Guitar();
+        Playable drum = new Drum();
+
+        System.out.println("\nPlaying instruments:");
+        guitar.play();
+        drum.play();
+    }
+}
 
