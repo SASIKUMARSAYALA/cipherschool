@@ -1,1 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        // Step 1: Print Hello, World!
+        System.out.println("Hello, World!");
+
+        // Step 2: Declare and initialize variables
+        String name = "Sasikumar";
+        int age = 23;
+        String favoriteLanguage = "Java";
+
+        // Step 3: Print formatted sentence
+        System.out.println("My name is " + name + ", I am " + age + " years old, and my favorite programming language is " + favoriteLanguage + ".");
+    }
+}
 
