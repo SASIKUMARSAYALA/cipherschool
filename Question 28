@@ -1,1 +1,66 @@
+import java.util.Scanner;
+
+public class Main {
+
+    // Enum with constants for days of the week
+    enum Day {
+        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // --- Part 1: Enum and custom message ---
+        System.out.print("Enter a day of the week (e.g., MONDAY): ");
+        String input = scanner.nextLine().toUpperCase();
+
+        try {
+            Day day = Day.valueOf(input);
+
+            switch (day) {
+                case MONDAY:
+                    System.out.println("Ugh... It's Monday! Back to work.");
+                    break;
+                case TUESDAY:
+                    System.out.println("Keep going! It's only Tuesday.");
+                    break;
+                case WEDNESDAY:
+                    System.out.println("Halfway there! Happy Wednesday.");
+                    break;
+                case THURSDAY:
+                    System.out.println("Almost the weekend. Hang in there!");
+                    break;
+                case FRIDAY:
+                    System.out.println("It's Friday! Time to celebrate!");
+                    break;
+                case SATURDAY:
+                    System.out.println("Weekend vibes! Enjoy your Saturday.");
+                    break;
+                case SUNDAY:
+                    System.out.println("Relax and recharge. It's Sunday.");
+                    break;
+            }
+
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid day entered. Please enter a valid day in all caps (e.g., MONDAY).");
+        }
+
+        // --- Part 2: Auto-boxing and unboxing ---
+        Integer a = 20; // auto-boxing (primitive to object)
+        Integer b = 30; // auto-boxing
+
+        int sum = a + b; // auto-unboxing during addition
+
+        System.out.println("\nAuto-boxed Integer values: " + a + " and " + b);
+        System.out.println("Sum (after unboxing and addition): " + sum);
+
+        Double x = 10.5; // auto-boxing
+        double y = x;    // auto-unboxing
+
+        System.out.println("Auto-boxed Double: " + x);
+        System.out.println("Unboxed primitive double: " + y);
+
+        scanner.close();
+    }
+}
 
