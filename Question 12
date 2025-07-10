@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        int mark1 = 85;
+        int mark2 = 90;
+        int mark3 = 80;
+
+        // Calculate average using floating-point division
+        float average = (mark1 + mark2 + mark3) / 3.0f;
+
+        System.out.println("Subject 1: " + mark1);
+        System.out.println("Subject 2: " + mark2);
+        System.out.println("Subject 3: " + mark3);
+        System.out.println("Average: " + average);
+    }
+}
