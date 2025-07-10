@@ -1,1 +1,56 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // --- Part 1: Check if number is prime ---
+        System.out.print("Enter a number to check if it's prime: ");
+        int number = scanner.nextInt();
+
+        boolean isPrime = true;
+
+        if (number <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime) {
+            System.out.println(number + " is a prime number.");
+        } else {
+            System.out.println(number + " is not a prime number.");
+        }
+
+        // --- Part 2: Array of 5 integers ---
+        int[] numbers = new int[5];
+
+        System.out.println("\nEnter 5 integers:");
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        System.out.println("Array elements:");
+        for (int num : numbers) {
+            System.out.println(num);
+        }
+
+        // Find the maximum value
+        int max = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+        }
+
+        System.out.println("Maximum element in the array: " + max);
+
+        scanner.close();
+    }
+}
 
